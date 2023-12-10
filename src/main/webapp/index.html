@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Weather App</title>
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Weather Icons CSS -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+
+<style>
+body {
+	background-color: #87CEEB; /* Sky Blue */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.card {
+	background-color: #F0F8FF; /* Alice Blue */
+	border: 1px solid #4682B4; /* Steel Blue */
+	color: #2F4F4F; /* Dark Slate Gray */
+	width: 300px;
+	padding: 20px;
+	text-align: center;
+}
+
+.weather-icon {
+	font-size: 3rem; /* Adjust size as needed */
+	color: #2E8B57; /* Sea Green */
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #2E8B57; /* Sea Green */
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #FF6347; /* Tomato */
+}
+
+input {
+	padding: 10px;
+	font-size: 16px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+button {
+	padding: 12px;
+	font-size: 16px;
+	background-color: #32CD32; /* Lime Green */
+	color: #FFF; /* White */
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	width: 100%;
+}
+
+button:hover {
+	background-color: #228B22; /* Forest Green */
+}
+</style>
+
+</head>
+<body>
+	<div
+		class="container d-flex align-items-center justify-content-center h-100">
+		<div class="card">
+			<h1>
+				<i class="wi wi-day-sunny weather-icon"></i> Weather App
+			</h1>
+			<form action="MyServlet" method="post">
+				<div class="mb-3">
+					<label for="city">City :</label> <input name="citynew" type="text"
+						placeholder="Enter Your City name">
+				</div>
+				<button type="submit" class="btn btn-success">Submit</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS and Popper.js -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
